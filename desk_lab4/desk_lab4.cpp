@@ -3,21 +3,31 @@
 
 using namespace std;
 
-void zav1();
-void zav2();
+void zav1(int n);
+void zav2(int n,int r);
 int factorial(int n);
 
 int main()
 {
 	cout << "zavdanya1:" << endl;
-	zav1();
+	int n;
+	cout << "Vvedit n: ";
+	cin >> n;
+	zav1(n);
+
 	cout << "zavdanya2:" << endl;
-	zav2();
+	unsigned int r;
+	cout << "Vvedit n: ";
+	cin >> n;
+	do
+	{
+		cout << "Vvedit r(r<=n): ";
+		cin >> r;
+	} while (r > n);
+	zav2(n,r);
 }
 
-void zav1() {
-	int n;
-	cout << "Vvedit n: "; cin >> n;
+void zav1(int n) {
 	string lecs = "";
 
 	for (int i = 1; i <= n; i++)
@@ -49,17 +59,8 @@ void zav1() {
 	}
 }
 
-void zav2() {
-	int n;
-	unsigned int r;
-	cout << "Vvedit n: ";
-	cin >> n;
-	do
-	{
-		cout << "Vvedit r(r<=n): ";
-		cin >> r;
-	} while (r > n);
-
+void zav2(int n, int r) {
+	
 	int lecs[100];
 
 	for (int i = 0; i < r; i++)
